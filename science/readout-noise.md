@@ -23,9 +23,11 @@ Prepare the $`+1`$ eigenstate of $`Z`$, perform the first collision and measure 
 Put $`\kappa=1-2q`$ and $`r_1=q+\kappa p_1/2`$. The two unnormalized bath states for the *true* middle flip and for ignoring that outcome have Bloch numerators $`p_1 z/2`$ and $`p_1 z`$, respectively, where $`z`$ is the $`Z`$ axis. The corrupted flip report combines them with coefficients $`\kappa`$ and $`q`$. Its probability is $`r_1`$ and its Bloch numerator is still $`p_1 z/2`$. A longitudinal final readout sees only the population transfer, since the partial-SWAP commutator is orthogonal to $`z`$. Thus
 
 ```math
-\Pr(W=F=1\mid R)=\frac{p_2}{2}\left(r_1-R\eta\frac{p_1}{2}\right),\qquad
-\Pr(W=F=1)=\frac{p_2r_1}{2},\qquad
-\mathbb E[-R\mid W=F=1]=\frac{\eta p_1}{2r_1}.
+\begin{aligned}
+\Pr(W=F=1\mid R)&=\frac{p_2}{2}\left(r_1-R\eta\frac{p_1}{2}\right),\\
+\Pr(W=F=1)&=\frac{p_2r_1}{2},\\
+\mathbb E[-R\mid W=F=1]&=\frac{\eta p_1}{2r_1}.
+\end{aligned}
 ```
 
 These identities hold for arbitrary signs of both collision angles. Set $`r_*=q+\kappa p/2`$, $`a_*=p r_*/2`$ and $`\mu_*=\eta_0p/(2r_*)`$. Conditional on the past, the acceptance probability is at least $`a_*`$. The accepted sign has mean zero under the null and mean at least $`\mu_*`$ under the alternative, since $`x/(2q+\kappa x)`$ is nondecreasing for $`x\gt 0`$. These lower bounds also hold after averaging latent block parameters independent of the current private choices.
@@ -36,4 +38,4 @@ The [matching converse](readout-noise-converse.md) gives the exact one-block inf
 
 ## Effect on channel reconstruction
 
-For a general bath map $`x\mapsto\ell+Tx`$, choose a fair initial sign $`P`$ along axis $`u`$ and a fair reset sign $`R`$ along $`v`$. Conditional on the corrupted first flip and the final flip, the means of $`-R`$ and $`-PR`$ are $`v\cdot\ell`$ and $`[p_1/(2r_1)]v^{\mathsf T}Tu``, respectively. The second moment therefore contains an angle-dependent attenuation for $`q\gt 0`$. If $`q\lt 1/2`$ is known, the weight $`h(W)=(W-q)/(1-2q)`$ has conditional mean equal to the true flip indicator. For each block, $`\mathbb E[h(W)\mathbf1_F]=p_1p_2/4`$, and the same expectation with an additional factor $`-PR`$ equals $`(p_1p_2/4)v^{\mathsf T}Tu`$. The ratio removes the angle dependence at the moment level. [Calibrated tomography](calibrated-tomography.md) proves the sharp weak-coupling rate for recovering the full map.
+For a general bath map $`x\mapsto\ell+Tx`$, choose a fair initial sign $`P`$ along axis $`u`$ and a fair reset sign $`R`$ along $`v`$. Conditional on the corrupted first flip and the final flip, the means of $`-R`$ and $`-PR`$ are $`v\cdot\ell`$ and $`[p_1/(2r_1)]v^{\mathsf T}Tu`$, respectively. The second moment therefore contains an angle-dependent attenuation for $`q\gt 0`$. If $`q\lt 1/2`$ is known, the weight $`h(W)=(W-q)/(1-2q)`$ has conditional mean equal to the true flip indicator. For each block, $`\mathbb E[h(W)\mathbf1_F]=p_1p_2/4`$, and the same expectation with an additional factor $`-PR`$ equals $`(p_1p_2/4)v^{\mathsf T}Tu`$. The ratio removes the angle dependence at the moment level. [Calibrated tomography](calibrated-tomography.md) proves the sharp weak-coupling rate for recovering the full map.
