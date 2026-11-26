@@ -1,0 +1,14 @@
+# Quantum Collision Memory Readout
+
+> An accessible probe learns the affine Bloch action of a fixed hidden qubit channel with two drifting partial-SWAP collisions and a fresh mixed bath per block.
+
+- [Overview](README.md) gives the protocol, principal sample rates and reader routes.
+- [Model](science/model.md) specifies exchange drift, private signs, budgets and probe-only access.
+- [Ideal tomography](science/tomography.md) proves the two-flip law, finite estimation, and full-channel ambiguity with a blind reset.
+- [Detection](science/testing.md) proves exact one-block measured chi-square information and matching testing exponents. The recorded and blind comparisons concern attempted blocks.
+- [Noisy binary detection](science/readout-noise.md) addresses one imperfect middle report. [Calibrated noisy tomography](science/calibrated-tomography.md) treats full affine estimation with a known report-error rate.
+- [Related work](references/RELATED_WORK.md) credits causal breaks, conditional correlations and earlier memory models.
+- [Learning](learning/README.md) gives the single educational anchor and 30-milestone route.
+- [Verification](verification/README.md) documents numerical checks and analytical proof scope.
+
+Memory detection here means testing depolarizing retention against bath replacement. Recovering a full channel has a stronger identifiability requirement. The proofs assume trusted preparations and final readouts and permit no retained quantum ancilla.
