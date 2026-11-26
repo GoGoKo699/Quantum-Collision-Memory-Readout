@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 35
     env:
-      CAPTURE_REVISION: '3fd6a00db436644451a5c3f921ccc546f51945e7'
+      CAPTURE_REVISION: 'd8a5c6d97bbbe7844472fd37dfaf04506273efd0'
       PROBE_PAGE: 'README.md'
     steps:
       - name: Check out the validation revision and scientific source history
